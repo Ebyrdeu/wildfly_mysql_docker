@@ -1,6 +1,7 @@
 # Dockerized MySQL and WildFly Setup
 
 ## Overview
+![image](https://github.com/Ebyrdeu/wildfly_mysql_docker/assets/42122071/99ecb922-fe70-4c7e-baa7-31c4886c9114)
 
 Setting up a Docker environment that includes a MySQL database and a WildFly application server, supporting up to JDK 20. This configuration is suitable for development, testing, and production environments requiring a Java EE application server and a relational database.
 
