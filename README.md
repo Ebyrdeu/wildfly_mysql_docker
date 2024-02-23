@@ -55,7 +55,7 @@ Required configurations for the WildFly server include:
 
 1. **Environment Variables**:
     - Create a `.env` file in the same directory as your `docker-compose.yml`.
-    - Specify `DB_PASSWORD` and, if necessary, `DB_NAME`, `DB_USERNAME`, and `DB_CONNECTION_URL`.
+    - Specify `DB_PASSWORD`, `DB_CONNECTION_URL`, `DB_NAME` and `DB_USERNAME`.
 
 2. **Application Packaging**:
     - If deploying a Java application, execute `mvn clean package` to build your WAR file.
@@ -71,4 +71,4 @@ Required configurations for the WildFly server include:
 
 ## Stopping the Services
 
-- To halt and remove the containers, run `docker-compose down`. Adding the `-v` option will also remove the volumes, clearing any persisted data.
+- To halt and remove the containers, run `docker-compose down`. Adding the `-v` option will also remove the volumes, clearing any persisted data. To also remove locally built images, add the option `-rmi local`.
