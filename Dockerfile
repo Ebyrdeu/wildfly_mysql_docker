@@ -1,7 +1,7 @@
 FROM quay.io/wildfly/wildfly:latest-jdk20
 
 # Download MySQL JDBC Connector
-# ADD --chown=jboss:jboss --chmod=666 https://repo1.maven.org/maven2/com/mysql/mysql-connector-j/8.3.0/mysql-connector-j-8.3.0.jar /tmp/mysql-connector-j-8.3.0.jar
+ADD --chown=jboss:jboss --chmod=666 https://repo1.maven.org/maven2/com/mysql/mysql-connector-j/8.3.0/mysql-connector-j-8.3.0.jar /tmp/mysql-connector-j-8.3.0.jar
 
 RUN /bin/sh -c '$JBOSS_HOME/bin/standalone.sh &' && \
    sleep 10 && \
