@@ -1,4 +1,5 @@
-FROM quay.io/wildfly/wildfly:latest-jdk20
+ARG JDK=20
+FROM quay.io/wildfly/wildfly:latest-jdk${JDK}
 
 # Download MySQL JDBC Connector
 #ADD --chown=jboss:jboss --chmod=666 https://repo1.maven.org/maven2/com/mysql/mysql-connector-j/8.3.0/mysql-connector-j-8.3.0.jar /tmp/mysql-connector-j-8.3.0.jar

@@ -30,6 +30,7 @@ The provided `docker-compose.yml` file orchestrates two main services:
 
 - **Build Context**: Defined as the current directory.
 - **Dockerfile**: Specifies the build instructions for the WildFly service, ensuring it's built with JDK 20 support.
+- **Args**: Specifies the Arugments of JDK for Wildfly image, up to version 64 support.
 - **Ports**: Exposes port `8080` on the host, mapping it from the same port inside the container.
 - **Dependencies**: Specifies a dependency on the `db` service, ensuring the database is ready before the application server starts.
 - **Restart Policy**: Set to `unless-stopped`.
