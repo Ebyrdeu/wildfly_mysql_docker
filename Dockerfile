@@ -11,7 +11,7 @@ RUN /bin/sh -c '$JBOSS_HOME/bin/standalone.sh &' && \
     $JBOSS_HOME/bin/jboss-cli.sh --connect --command='data-source add --jndi-name=java:/MySqlDS --name=MySQLPool --connection-url=${DB_CONNECTION_URL:jdbc:mysql://localhost:3306} --driver-name=mysql --user-name=${DB_USERNAME:root} --password=${DB_PASSWORD:password}' &&\
     $JBOSS_HOME/bin/jboss-cli.sh --connect --command=":shutdown" && \
     rm -r /opt/jboss/wildfly/standalone/configuration/standalone_xml_history/current/* && \
-    rm /tmp/mysql-connector-j-8.3.0.jar\
+    rm /tmp/mysql-connector-j-8.3.0.jar
 
 # Add war to the deployments folder
 ADD target/*.war /opt/jboss/wildfly/standalone/deployments/
