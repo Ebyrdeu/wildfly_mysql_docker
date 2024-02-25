@@ -28,7 +28,7 @@ services:
     ports:
       - "8080:8080"
     environment:
-      DB_CONNECTION_URL: jdbc:mysql://db:3306/${DB_NAME}
+      DB_CONNECTION_URL: ${DB_CONNECTION_URL}
       DB_USERNAME: ${DB_USERNAME}
       DB_PASSWORD: ${DB_PASSWORD}
     depends_on:

@@ -50,6 +50,18 @@ Required configurations for the WildFly server include:
 - `DB_PASSWORD`: Password for the database user.
 - `DB_CONNECTION_URL`: JDBC connection URL for the database.
 
+### Additional Environment Variable Configuration
+
+In addition to the previously mentioned environment variables, it's essential to understand how these variables interconnect, especially the `DB_CONNECTION_URL`. This variable is crucial for configuring the connection between the WildFly application server and the MySQL database. The format for this variable is as follows:
+```env
+DB_CONNECTION_URL=jdbc:mysql://db:3306/${DB_NAME}
+```
+Here, `db` refers to the service name of the MySQL database defined in `docker-compose.yml`. 
+This naming is vital because Docker Compose uses the service names to facilitate network communication between containers. 
+By using db as the hostname, you instruct the WildFly server to connect to the MySQL database using the internal network established by Docker Compose.
+
+Furthermore, you might consider adding an `DB_NAME` for automatically creating a database with a specified name.
+
 ## Deployment Instructions
 
 ### Preparing for Deployment
